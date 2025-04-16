@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/contact.css'; // Ensure this path is correct
 
 const Contact = () => {
   const [message, setMessage] = useState('');
@@ -11,13 +12,13 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <h2>Contact Us</h2>
-      <p>We'd love to hear from you! Please fill out the form below to get in touch with us.</p>
+      <p>We&apos;d love to hear from you! Please fill out the form below to get in touch with us.</p>
 
       <form onSubmit={handleSubmit} className="contact-form">
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
         <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit" className="submit-btn">Send Message</button>
       </form>
 
       {message && <p className="success-message">{message}</p>}
